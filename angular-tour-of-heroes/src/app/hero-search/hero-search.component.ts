@@ -16,7 +16,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroSearchComponent implements OnInit {
   heroes$: Observable<Hero[]>;
-  private searchTerms = new Subject<string>();
+  private searchTerms = new Subject<string>(); //stream of observables
 
   constructor(private heroService: HeroService) {}
 

@@ -1,0 +1,25 @@
+<!-- <input #box (keyup)="onKey(box.value)">
+<p>{{values}}</p> -->
+
+<!-- //use the #syntax to reference the value of the input box
+//when the event occurs pass the value to the method. -->
+
+<!-- <input #box2 (blur)="onKey2(box2.value)">
+<p>{{values2}}</p> -->
+
+
+<form (ngSubmit)="onSubmit(tempForm)" #tempForm="ngForm">
+  <div class="form-group">
+    <label for="temp">
+      <input class="form-control" name="temp" required [(ngModel)]="selectedTemp.first">
+    </label>
+  </div>
+  <p>
+   <input type="radio" value="celsius" name="tempUnit" required [ngModel]="selectedTemp.firstUnit" > Celsius
+   <input type="radio" value="fahrenheit" name="tempUnit" required [ngModel]="selectedTemp.firstUnit" > Fahrenheit
+</p>
+  <button type="submit" [disabled]="!tempForm.form.valid">Submit</button>
+</form>
+<div [hidden]="!tempForm.form.valid">
+  {{selectedTemp.second}} degreees {{selectedTemp.secondUnit}}
+</div>

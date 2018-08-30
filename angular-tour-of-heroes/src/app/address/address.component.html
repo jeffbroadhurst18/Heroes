@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit(addressForm)" #addressForm="ngForm">
+  <div class="form-group">
+    <div>
+    <label for="housenumber">House Number
+      <input class="form-control" name="housenumber" required [(ngModel)]="currentAddress.HouseNumber">
+    </label>
+    </div>
+    <div>
+    <label for="street">Street
+      <input class="form-control" name="street" required [(ngModel)]="currentAddress.Street">
+    </label>
+    </div>
+    <div>
+    <label for="city">City
+      <input class="form-control" name="city" required [(ngModel)]="currentAddress.City">
+    </label>
+    </div>
+    <div>
+    <label for="county">County
+      <input class="form-control" name="county" required [(ngModel)]="currentAddress.County">
+    </label>
+    </div>
+    <div>
+    <label for="postcode">Postcode
+      <input class="form-control" name="postcode" required [(ngModel)]="currentAddress.Postcode">
+    </label>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!addressForm.form.valid">Submit</button>
+</form>
+<div *ngIf="addressValid">
+  <div>
+  {{formattedAddress.firstLine}}
+  </div>
+  <div>  
+    {{formattedAddress.secondLine}}
+  </div>
+  <div>
+    {{formattedAddress.thirdLine}}
+  </div>
+</div>
+
