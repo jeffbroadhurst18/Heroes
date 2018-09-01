@@ -38,6 +38,7 @@ export class MealComponent implements OnInit {
 
   confirm(): void {
     console.log(this.radioSelected);
+    if (!this.radioSelected){return;}
     this.confirmed = true;
     this.choice.emit(this.radioSelected);
   }
