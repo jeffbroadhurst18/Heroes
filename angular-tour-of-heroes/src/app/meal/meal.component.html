@@ -1,0 +1,14 @@
+<div *ngIf="mealOptions">
+    <p class="title">
+      Meal: {{meal | mealType}}
+    </p>
+    <div *ngFor="let option of mealOptions" class="radio">
+          <label for="{{meal}}_{{option}}" class="options">
+            <input id="{{meal}}_{{option}}" [value]='option' type="radio" name="meal-option_{{meal}}" [(ngModel)]="radioSelected" [disabled]="confirmed">{{option}} 
+          </label>
+    </div>
+    <button (click)='confirm()'>Confirm</button>
+    <div *ngIf="radioSelected">
+      <p><span *ngIf="confirmed">Confirmed</span><span *ngIf="!confirmed">Provisional</span> option: {{radioSelected}}</p>
+    </div>
+</div>

@@ -14,6 +14,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { TesterComponent } from './tester/tester.component';
 import { AddressComponent } from './address/address.component';
+import { DayPlanComponent } from './day-plan/day-plan.component';
+import { MealComponent } from './meal/meal.component';
+import { MealTypePipe } from './meal-type.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AddressComponent } from './address/address.component';
     DashboardComponent,
     HeroSearchComponent,
     TesterComponent,
-    AddressComponent
+    AddressComponent,
+    DayPlanComponent,
+    MealComponent,
+    MealTypePipe
   ],
   imports: [
     BrowserModule,FormsModule, AppRoutingModule,HttpClientModule,

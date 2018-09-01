@@ -1,0 +1,11 @@
+<h1>Meal Planner</h1>
+<!-- <button (click)="b.reset();l.reset();d.reset();">Reset</button> -->
+<button (click)="resetAll(b,d,l);">Reset</button>
+<div>
+  <div class="meal-chosen">Breakfast: {{breakfast}}</div>
+  <div class="meal-chosen">Lunch: {{lunch}}</div>
+  <div class="meal-chosen">Dinner: {{dinner}}</div>
+</div>
+<app-meal [meal]=1 class="meal" (choice)="onChosen($event,1)" #b></app-meal>
+<app-meal [meal]=2 class="meal" (choice)="onChosen($event,2)" #l></app-meal>
+<app-meal [meal]=3 class="meal" (choice)="onChosen($event,3)" #d></app-meal>

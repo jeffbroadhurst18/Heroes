@@ -1,0 +1,11 @@
+.meal {
+    width: 33%;
+    float:left;
+}
+
+.meal-chosen {
+    width: 33%;
+    float:left;
+    font-size: 2em;
+    color: darkblue;
+}
