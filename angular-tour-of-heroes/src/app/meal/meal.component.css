@@ -1,11 +1,31 @@
 .radio {
    text-align: left;
+   
 }
 
 .options {
     padding-left: 200px;
+    cursor: pointer;
 }
 
 .title {
     font-weight: bold;
+}
+
+.selected {
+    font-weight: bold;
+    color: blue;
+}
+
+.confirmed {
+    font-weight: bold;
+    color: darkblue;
+}
+
+.not-confirmed:hover {
+    color:blue;
+}
+
+.fix-pointer {
+    cursor: default;
 }

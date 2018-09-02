@@ -14,6 +14,7 @@ export class MealComponent implements OnInit {
   mealTitle: string;
   radioSelected: string;
   confirmed: boolean;
+  radioConfirmed: string;
 
   constructor() {
     this.confirmed = false;
@@ -40,6 +41,7 @@ export class MealComponent implements OnInit {
     console.log(this.radioSelected);
     if (!this.radioSelected){return;}
     this.confirmed = true;
+    this.radioConfirmed = this.radioSelected;
     this.choice.emit(this.radioSelected);
   }
 
